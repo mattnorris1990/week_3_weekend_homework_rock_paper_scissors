@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <section class="playerinput">
+        <form action="/playgameagainstcomputer" method="post"> 
+                <div class="input">
+                    <label for="add_player_1_name">Player name:</label>
+                    <input type="text" name="player1name" id="player1name" class="input-box">
+                </div>
+                <div class="input">
+                    <label for="player_1_choice">Make Choice:</label>
+                    <select name="player1choice" id="player1choice" class="input-box">
+                        <option value="rock">Rock</option>
+                        <option value="paper">Paper</option>
+                        <option value="scissors">Scissors</option>
+                    </select>
+                </div>
+                <div id="submit-button">
+                    <input type="submit" value="Play!" class="bigbutton">
+                </div>
+        </form>
+    </section>
+
+{% endblock %}

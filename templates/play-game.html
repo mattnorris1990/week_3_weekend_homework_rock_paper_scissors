@@ -2,28 +2,32 @@
 
 {% block content %}
 
-<form action="/playgame" method="post"> 
-        <label for="add_player_1_name">Player 1 name</label>
-        <input type="text" name="player1name" id="player1name" class="box-color">
-        
-        <label for="player_1_choice">Make Choice</label>
-        <select name="player1choice" id="player1choice">
-            <option value="rock">Rock</option>
-            <option value="paper">Paper</option>
-            <option value="scissors">Scissors</option>
-        </select>
+<section class="playerinput">
+    <form action="/playgame" method="post">
+        <div class="input"> 
+            <label for="add_player_1_name">Player 1:</label>
+            <input type="text" name="player1name" id="player1name" class="input-box">
+   
+            <label for="player_1_choice">Make Choice</label>
+            <select name="player1choice" id="player1choice" class="input-box">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissors</option>
+            </select>
+        </div>
+        <div class="input">
+            <label for="add_player_2_name">Player 2:</label>
+            <input type="text" name="player2name" id="player2name" class="input-box">
 
-        <label for="add_player_2_name">Player 2 name</label>
-        <input type="text" name="player2name" id="player2name" class="box-color">
-        
-        <label for="player_1_choice">Make Choice</label>
-        <select name="player2choice" id="player2choice">
-            <option value="rock">Rock</option>
-            <option value="paper">Paper</option>
-            <option value="scissors">Scissors</option>
-        </select>
-        <input type="submit" value="Play!" id="big-button">
-</form>
-
+            <label for="player_1_choice">Make Choice</label>
+            <select name="player2choice" id="player2choice" class="input-box">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissors</option>
+            </select>
+        </div>
+            <input type="submit" value="Play!" class="bigbutton">
+    </form>
+</section>
 
 {% endblock %}

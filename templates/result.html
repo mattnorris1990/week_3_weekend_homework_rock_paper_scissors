@@ -3,23 +3,50 @@
 {% block content %}
 
 {% if winner %}
-
-    {{ player_1.name}} chose {{ player_1.choice }}
-    {{ player_2.name}} chose {{ player_2.choice }}
-
-    {{ winner }} wins by playing {{ choice}}
-
+    <section class="finalresult">
+        <div class="player-1-result">
+            <p>
+                {{ player_1.name}} chose... 
+            </p>
+            <p id="answer">    
+                {{ player_1.choice }}!
+            </p>
+        </div>
+        <div class="player-2-result">
+            <p>
+                {{ player_2.name}} chose...
+            </p>
+            <p id="answer">
+                {{ player_2.choice }}!
+            </p>
+        </div>
+        <div class="winresult">
+            {{ winner }} wins by playing {{ choice}}
+        </div>
+    </section>   
 {% else %}
-    <p>
-        {{ player_1.name}} and {{ player_2.name }} both chose {{ player_1.choice}}
-    </p>
-    <p>
-        It was a draw!
-    </p>
-    
-
+    <section class="nowinner"> 
+        <div class="itsadraw">
+            <p>
+                {{ player_1.name}} and {{ player_2.name }} both chose... 
+            </p>
+            <p id="answer">
+                {{ player_1.choice}}
+            </p>
+        <div class="drawresult">
+            <p>
+                It was a draw!
+            </p>
+        </div>
+    </section>
 {% endif %}
-    <p>
-        <a href="/">Play again</a>
-    </p>
+
+<div class="resultsbutton">
+
+    <a href="/">
+        <button class="bigbutton">Play Again</button>
+    </a>
+
+</div>
+
 {% endblock %}

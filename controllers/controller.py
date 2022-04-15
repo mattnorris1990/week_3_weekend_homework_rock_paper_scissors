@@ -9,11 +9,11 @@ def home():
     return render_template("index.html")
 
 @app.route("/startgame")
-def player_1():
+def start_multiplayer():
     return render_template("play-game.html")
 
 @app.route("/playgame", methods=["POST"])
-def input_player_2():
+def input_players():
     print(request.form)
 
     player_1_name = request.form["player1name"]
@@ -35,6 +35,27 @@ def input_player_2():
         return render_template("result.html", player_1 = player_1, player_2 = player_2, winner = winner.name, choice = winner.choice)
     else:
         return render_template("result.html", player_1 = player_1, player_2 = player_2)
+
+@app.route("/startgameagainstcomputer")
+def play_against_computer():
+    return render_template("play-game-against-computer.html")
+
+@app.route("/playgameagainstcomputer", methods=["POST"])
+def input_player():
+    print(request.form)
+
+    player_name = request.form["player1name"]
+    player_choice = request.form["player1choice"]
+
+    human_player = Player(player_name, player_choice)
+    computer = Player("computer", computer_player())
+
+    winner = play_game(human_player, computer)
+
+    if winner != None:
+        return render_template("result.html", player_1 = human_player, player_2 = computer, winner = winner.name, choice = winner.choice)
+    else:
+        return render_template("result.html", player_1 = human_player, player_2 = computer)
 
 # @app.route("/<player_1_choice>/<player_2_choice>")
 # def RPS(player_1_choice, player_2_choice):

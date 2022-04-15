@@ -1,4 +1,6 @@
 from modules.player import *
+import random
+
 
 def play_game(player_1, player_2):
     if player_1.choice == "rock":
@@ -50,3 +52,7 @@ def play_game(player_1, player_2):
     #         return player_2
 
 
+def computer_player():
+    options = ["rock", "paper", "scissors"]
+    choice = random.randrange(3)
+    return options[choice]

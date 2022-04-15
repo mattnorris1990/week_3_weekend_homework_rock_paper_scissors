@@ -1,0 +1,139 @@
+body {
+    background-color: rgb(197, 42, 88);
+    margin-left: 15%;
+    margin-right: 15%;
+    font-family: 'VT323', monospace;
+    font-size: 150%;
+    color:rgb(255, 218, 96);
+    text-transform: uppercase;
+}
+
+.logo {
+    font-family: 'Press Start 2P', cursive;
+    padding: 2%;
+    font-size: 90%;
+    text-align: center;
+}
+
+hr {
+    border: 3px solid rgb(255, 218, 96);
+}
+
+#game-intro {
+    display: grid;
+    grid-template-areas:
+    'select instructions';
+    grid-column-gap: 1%;
+    margin-right: 10%;
+    margin-left: 10%;
+
+}
+
+#hottoplay {
+    grid-area: instructions;
+    margin: 0;
+
+}
+
+#gametypeselect { 
+    grid-area: select;
+    margin: 0;
+
+}
+
+.bigbutton {
+    background-color: rgb(197, 42, 88);
+    margin: 2%;
+    padding: 4%;
+    border: 4px rgb(255, 218, 96) solid;
+    box-shadow: 0 4px 8px 0 rgb(142, 30, 64), 0 3px 10px 0 rgb(171, 36, 76);
+    color: rgb(255, 218, 96);
+    font-family: 'Press Start 2P', cursive;
+    padding: 2%;
+    font-size: 100%;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.bigbutton:hover {
+    background-color:rgb(255, 218, 96);
+    color: rgb(197, 42, 88) ;
+}
+
+.bigbutton:active {
+    background-color:rgb(255, 218, 96);
+    color: rgb(197, 42, 88) ; 
+    box-shadow: none;
+}
+
+.playerinput {
+    text-align: center;
+}
+
+.input {
+    margin: 5%;
+    font-size: 150%;
+}
+
+.input-box {
+    color:rgb(255, 218, 96);
+    background-color: rgb(197, 42, 88);
+    font-family: 'VT323', monospace;
+    font-size: 125%;
+    border: 4px rgb(255, 218, 96) solid;
+}
+
+.finalresult {
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    'player1result player2result'
+    'winresult winresult';
+}
+
+.player-1-result {
+    grid-area: player1result;
+    margin: 3%;
+    font-size: 150%;
+}
+
+.player-2-result {
+    grid-area: player2result;
+    margin: 3%;
+    font-size: 150%;
+}
+
+.winresult {
+    grid-area: winresult;
+    margin: 3%;
+    font-size: 200%;
+    color:rgb(197, 42, 88);
+    background-color: rgb(255, 218, 96);
+    padding: 1%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.resultsbutton {
+    text-align: center;
+}
+
+.nowinner {
+    text-align: center;
+}
+
+.itsadraw {
+    margin: 3%;
+    font-size: 150%;
+    text-align: center;
+}
+
+.drawresult {
+
+    font-size: 200%;
+    color:rgb(197, 42, 88);
+    background-color: rgb(255, 218, 96);
+    margin-right: 10%;
+    margin-left: 10%;
+}
